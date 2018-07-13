@@ -89,4 +89,46 @@ DNS的作用是输入域名，输出对应的IP。
 { [1440 bytes data]
 ```
 # 用Chrome查看HTTP请求与响应内容
-## 查看HTTP请求内容
+首先，右键单击Chrome页面空白处弹出对话框的检查按钮
+![检查](https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/%E6%A3%80%E6%9F%A5.jpg)
+选择页面的Network选项
+![Network](https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/Network.jpg)
+在页面上刷新一下就会向服务器发送一个请求同时会接受一个响应，单击类型为document的文件
+![Doc](https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/Doc.jpg)
+右侧会出现如下图的三个选项，Response为响应，Request为请求,由此就得到了刷新一个页面这个操作的HTTP请求和响应内容
+![内容](https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/%E5%86%85%E5%AE%B9.jpg)
+## 请求内容
+点开Request Headers选项后，一定要点下**view source**，得到如下:
+```
+GET /courses/ec3a5e28-02da-47d6-9226-927db23e82a2 HTTP/1.1
+Host: xiedaimala.com
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: UM_distinctid=1638743d0ca79-082af185a2f84e-3c3c520d-100200-1638743d0cb18a; CNZZDATA1271340636=996656435-1526978113-https%253A%252F%252Fxiedaimala.com%252F%7C1527498
+```
+## 响应内容
+点开Response Headers选项，也一定要点下**view source**，如下：
+```
+HTTP/1.1 200 OK
+Server: nginx/1.4.6 (Ubuntu)
+Date: Mon, 28 May 2018 09:56:56 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _task_center_session=YjFtRUYvQzVOcHl1SDlueXhlQ1hRbDNKUUh1alg0VE9ZbHlNdzVyOUpRSHhROTkyTmhITGE0MFp2Y1JoMmlsM1Q2WmJ1R1JyS3p2bHhuaVpKWXVuVUZham43c3FOWVNVY2xON01XTkVNdzV1eHBCdTcwbExhMjU2anh1K0lNcFVOeU9tY2hjanRTVXZpYStMcnhMTmd3PT0tLWN4MzhobStsckhheGZRRmpCQTJTS1E9PQ%3D%3D--8274179183ee126234b96358f290b380794966c1; path=/; secure; HttpOnly
+X-Request-Id: 0d95e9e6-4a2d-4e4a-bad6-d0424b30b30c
+X-Runtime: 0.021043
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+Strict-Transport-Security: max-age=15768000
+Content-Encoding: gzip
+```
+
