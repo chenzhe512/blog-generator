@@ -5,6 +5,9 @@ tags:
 ---
 > AJAX---异步的JavaScript与XML技术
 ![4-min.jpg](https://i.loli.net/2018/08/22/5b7d3911bdf47.jpg)
+
+
+<!--more-->
 # 1.简介
 维基百科
 AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出。
@@ -22,7 +25,7 @@ AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术�
 局限性在于刷新页面，占用内存资源，带宽浪费，如果我想事项以下两个条件：
 1. get、post、put、delete 请求都行
 2. 形式不定，即想以什么形式展示就以什么形式展示
-# 2.2 新突破
+# 2.2新突破
 IE 5 率先在 JS 中引入 ActiveX 对象（API），使得 JS 可以直接发起 HTTP 请求。
 随后 Mozilla、 Safari、 Opera 也跟进（抄袭）了，取名 XMLHttpRequest，并被纳入 W3C 规范。
 # 2.3规范化
